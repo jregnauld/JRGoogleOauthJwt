@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A2A6152C-BF11-48FD-8A4C-717A514AFCD1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DEBA0D510ADB35BF8A0EF0E84256ADA47C3AE894</key>
+		<string>https://github.com/jregnauld/JRGoogleOauthJwt.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JRGoogleOauthJwtDemo/JRGoogleOauthJwtDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DEBA0D510ADB35BF8A0EF0E84256ADA47C3AE894</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jregnauld/JRGoogleOauthJwt.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DEBA0D510ADB35BF8A0EF0E84256ADA47C3AE894</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DEBA0D510ADB35BF8A0EF0E84256ADA47C3AE894</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JRGoogleOauthJwt</string>
+		</dict>
+	</array>
+</dict>
+</plist>
