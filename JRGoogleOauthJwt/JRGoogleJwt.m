@@ -14,6 +14,9 @@ static NSString *const kGoogleAud =
 static NSString *const kGooglePassPhrasePrivateKey = @"notasecret";
 static int const kOneHourInsec = 3600;
 
+static NSString *const kGoogleHeaderJSON = @"{\"alg\":\"RS256\",\"typ\":\"JWT\"}";
+
+
 @interface JRGoogleJwt ()
 @property(nonatomic, strong) NSString *privateKeyName;
 @property(nonatomic, strong) NSString *iss;
@@ -21,7 +24,9 @@ static int const kOneHourInsec = 3600;
 @property(nonatomic, strong) NSString *aud;
 @property(nonatomic, assign) int exp;
 @property(nonatomic, assign) int iat;
-@property(nonatomic, strong) NSString *jwtHeaderBase64Encoded ;
+@property(nonatomic, strong) NSString *jwtHeaderBase64Encoded;
+@property(nonatomic, strong) NSString *jwtClaimBase64Encoded;
+
 @end
 
 @implementation JRGoogleJwt
@@ -37,8 +42,40 @@ static int const kOneHourInsec = 3600;
         NSTimeInterval currentTimeInSec = [[NSDate date] timeIntervalSince1970];
         _iat = (int)currentTimeInSec;
         _exp = _iat + kOneHourInsec;
+        _jwtHeaderBase64Encoded = [self encodeToBase64:kGoogleHeaderJSON];
+        _jwtClaimBase64Encoded = [self generateJwtClaimJsonBase64Encoded];
     }
     return self;
 }
+-(NSString*)generateJwtClaimJsonBase64Encoded{
+    NSString *scopeStr = [_scope componentsJoinedByString:@" "];
+    NSDictionary *jsonDico = @{ @"iss":self.iss,
+                            @"scope": scopeStr,
+                            @"aud": self.aud,
+                            @"exp": [NSString stringWithFormat:@"%d", self.exp],
+                            @"iat": [NSString stringWithFormat:@"%d", self.iat],
+                           };
+    NSError *error = nil;
+    NSData *jsonObject =
+    [NSJSONSerialization dataWithJSONObject:jsonDico
+                                    options:NSJSONWritingPrettyPrinted
+                                      error:&error];
+    NSString *jsonStr =
+    [[NSString alloc] initWithData:jsonObject encoding:NSUTF8StringEncoding];
+    return [self encodeToBase64:jsonStr];
+}
+-(NSString *)encodeToBase64:(NSString*)str{
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    return [data base64EncodedStringWithOptions:0];
+}
 
+-(void)generateSignedGoogleJwt:(SignedGoogleJwtCompletionBlock)block{
+    
+    NSString *signedGoogleJwt = = [NSString
+                                   stringWithFormat:@"%@.%@.%@", self.jwtClaimBase64Encoded, self.jwtClaimBase64Encoded,
+                                   @""];
+    
+    block(signedGoogleJwt);
+
+}
 @end

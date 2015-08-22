@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef void (^SignedGoogleJwtCompletionBlock)(NSString *signedGoogleJwt);
 
 @interface JRGoogleJwt : NSObject
 - (instancetype)initWithIss:(NSString *)iss
