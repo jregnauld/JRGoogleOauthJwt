@@ -79,3 +79,49 @@ static NSString *const kGoogleHeaderJSON = @"{\"alg\":\"RS256\",\"typ\":\"JWT\"}
 
 }
 @end
+
+/**
+ * Creates the signature for the passed plain data.
+ * Signature is created by encrypting the SHA256 hash value of the plain data.
+ *
+ * @param plainData Any raw data of which the signature should get created.
+ * @param privateKey The private key used to encrypt the data.
+ * @return Create signature bytes.
+ * Thanks Michael Hohl for sharing that! 
+ * https://github.com/hohl/PKCS-Universal
+ */
+NSData* PKCSSignBytesSHA256withRSA(NSData* plainData, SecKeyRef privateKey)
+{
+    if (!privateKey) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException
+                                       reason:@"Passed private key of PKCSSignBytesSHA256withRSA must not be NULL!"
+                                     userInfo:nil];
+    }
+    
+    size_t signedHashBytesSize = SecKeyGetBlockSize(privateKey);
+    uint8_t* signedHashBytes = malloc(signedHashBytesSize);
+    memset(signedHashBytes, 0x0, signedHashBytesSize);
+    
+    size_t hashBytesSize = CC_SHA256_DIGEST_LENGTH;
+    uint8_t* hashBytes = malloc(hashBytesSize);
+    if (!CC_SHA256([plainData bytes], (CC_LONG)[plainData length], hashBytes)) {
+        return nil;
+    }
+    
+    SecKeyRawSign(privateKey,
+                  kSecPaddingPKCS1SHA256,
+                  hashBytes,
+                  hashBytesSize,
+                  signedHashBytes,
+                  &signedHashBytesSize);
+    
+    NSData* signedHash = [NSData dataWithBytes:signedHashBytes
+                                        length:(NSUInteger)signedHashBytesSize];
+    
+    if (hashBytes)
+        free(hashBytes);
+    if (signedHashBytes)
+        free(signedHashBytes);
+    
+    return signedHash;
+}
