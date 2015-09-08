@@ -10,8 +10,7 @@
 #import "JRGoogleJwt.h"
 
 
-static NSString *const kGoogleAud =
-@"https://www.googleapis.com/oauth2/v3/token";
+static NSString *const kGoogleAud = @"https://www.googleapis.com/oauth2/v3/token";
 static NSString *const kGooglePassPhrasePrivateKey = @"notasecret";
 static int const kOneHourInsec = 3600;
 

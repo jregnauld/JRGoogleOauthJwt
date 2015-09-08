@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4BA86BEA1B9F58F500AC3F98 /* JRGoogleJwt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86BE91B9F58F500AC3F98 /* JRGoogleJwt.m */; };
 		4BA86BEB1B9F58F500AC3F98 /* JRGoogleJwt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86BE91B9F58F500AC3F98 /* JRGoogleJwt.m */; };
+		4BA86BEE1B9F768D00AC3F98 /* JRGoogleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86BED1B9F768D00AC3F98 /* JRGoogleAPIManager.m */; };
+		4BA86BEF1B9F768D00AC3F98 /* JRGoogleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86BED1B9F768D00AC3F98 /* JRGoogleAPIManager.m */; };
 		91D4E9D71B89301C0035AC68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D4E9D61B89301C0035AC68 /* main.m */; };
 		91D4E9DA1B89301C0035AC68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D4E9D91B89301C0035AC68 /* AppDelegate.m */; };
 		91D4E9DD1B89301C0035AC68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D4E9DC1B89301C0035AC68 /* ViewController.m */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		4BA86BE81B9F58F500AC3F98 /* JRGoogleJwt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRGoogleJwt.h; path = ../JRGoogleOauthJwt/JRGoogleJwt.h; sourceTree = "<group>"; };
 		4BA86BE91B9F58F500AC3F98 /* JRGoogleJwt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRGoogleJwt.m; path = ../JRGoogleOauthJwt/JRGoogleJwt.m; sourceTree = "<group>"; };
+		4BA86BEC1B9F768D00AC3F98 /* JRGoogleAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRGoogleAPIManager.h; path = ../JRGoogleOauthJwt/JRGoogleAPIManager.h; sourceTree = "<group>"; };
+		4BA86BED1B9F768D00AC3F98 /* JRGoogleAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRGoogleAPIManager.m; path = ../JRGoogleOauthJwt/JRGoogleAPIManager.m; sourceTree = "<group>"; };
 		91D4E9D11B89301C0035AC68 /* JRGoogleOauthJwtDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRGoogleOauthJwtDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D4E9D51B89301C0035AC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91D4E9D61B89301C0035AC68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 			children = (
 				4BA86BE81B9F58F500AC3F98 /* JRGoogleJwt.h */,
 				4BA86BE91B9F58F500AC3F98 /* JRGoogleJwt.m */,
+				4BA86BEC1B9F768D00AC3F98 /* JRGoogleAPIManager.h */,
+				4BA86BED1B9F768D00AC3F98 /* JRGoogleAPIManager.m */,
 			);
 			name = JRGoogleOauthJwt;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA86BEE1B9F768D00AC3F98 /* JRGoogleAPIManager.m in Sources */,
 				91D4E9DD1B89301C0035AC68 /* ViewController.m in Sources */,
 				91D4E9DA1B89301C0035AC68 /* AppDelegate.m in Sources */,
 				4BA86BEA1B9F58F500AC3F98 /* JRGoogleJwt.m in Sources */,
@@ -244,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA86BEF1B9F768D00AC3F98 /* JRGoogleAPIManager.m in Sources */,
 				4BA86BEB1B9F58F500AC3F98 /* JRGoogleJwt.m in Sources */,
 				91D4E9F11B89301D0035AC68 /* JRGoogleOauthJwtDemoTests.m in Sources */,
 			);
