@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>A2A6152C-BF11-48FD-8A4C-717A514AFCD1</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>JRGoogleOauthJwtDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>DEBA0D510ADB35BF8A0EF0E84256ADA47C3AE894</key>
 		<string>https://github.com/jregnauld/JRGoogleOauthJwt.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JRGoogleOauthJwtDemo/JRGoogleOauthJwtDemo.xcodeproj/project.xcworkspace</string>
+	<string>JRGoogleOauthJwtDemo/JRGoogleOauthJwtDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>DEBA0D510ADB35BF8A0EF0E84256ADA47C3AE894</key>
