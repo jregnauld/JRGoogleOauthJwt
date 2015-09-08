@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BA86BEA1B9F58F500AC3F98 /* JRGoogleJwt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86BE91B9F58F500AC3F98 /* JRGoogleJwt.m */; };
+		4BA86BEB1B9F58F500AC3F98 /* JRGoogleJwt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86BE91B9F58F500AC3F98 /* JRGoogleJwt.m */; };
 		91D4E9D71B89301C0035AC68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D4E9D61B89301C0035AC68 /* main.m */; };
 		91D4E9DA1B89301C0035AC68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D4E9D91B89301C0035AC68 /* AppDelegate.m */; };
 		91D4E9DD1B89301C0035AC68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D4E9DC1B89301C0035AC68 /* ViewController.m */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BA86BE81B9F58F500AC3F98 /* JRGoogleJwt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRGoogleJwt.h; path = ../JRGoogleOauthJwt/JRGoogleJwt.h; sourceTree = "<group>"; };
+		4BA86BE91B9F58F500AC3F98 /* JRGoogleJwt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRGoogleJwt.m; path = ../JRGoogleOauthJwt/JRGoogleJwt.m; sourceTree = "<group>"; };
 		91D4E9D11B89301C0035AC68 /* JRGoogleOauthJwtDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRGoogleOauthJwtDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D4E9D51B89301C0035AC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91D4E9D61B89301C0035AC68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,9 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BA86BE71B9F58D600AC3F98 /* JRGoogleOauthJwt */ = {
+			isa = PBXGroup;
+			children = (
+				4BA86BE81B9F58F500AC3F98 /* JRGoogleJwt.h */,
+				4BA86BE91B9F58F500AC3F98 /* JRGoogleJwt.m */,
+			);
+			name = JRGoogleOauthJwt;
+			sourceTree = "<group>";
+		};
 		91D4E9C81B89301C0035AC68 = {
 			isa = PBXGroup;
 			children = (
+				4BA86BE71B9F58D600AC3F98 /* JRGoogleOauthJwt */,
 				91D4E9D31B89301C0035AC68 /* JRGoogleOauthJwtDemo */,
 				91D4E9ED1B89301D0035AC68 /* JRGoogleOauthJwtDemoTests */,
 				91D4E9D21B89301C0035AC68 /* Products */,
@@ -221,6 +235,7 @@
 			files = (
 				91D4E9DD1B89301C0035AC68 /* ViewController.m in Sources */,
 				91D4E9DA1B89301C0035AC68 /* AppDelegate.m in Sources */,
+				4BA86BEA1B9F58F500AC3F98 /* JRGoogleJwt.m in Sources */,
 				91D4E9D71B89301C0035AC68 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA86BEB1B9F58F500AC3F98 /* JRGoogleJwt.m in Sources */,
 				91D4E9F11B89301D0035AC68 /* JRGoogleOauthJwtDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +434,7 @@
 				91D4E9F61B89301D0035AC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91D4E9F71B89301D0035AC68 /* Build configuration list for PBXNativeTarget "JRGoogleOauthJwtDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +443,7 @@
 				91D4E9F91B89301D0035AC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
